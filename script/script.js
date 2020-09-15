@@ -5,7 +5,7 @@ const formTodoControl = document.querySelector('.todo-control'),
   ulTodoList = document.querySelector('.todo-list'),
   ulTodoCompleted = document.querySelector('.todo-completed');
 
-const todoData = [];
+let todoData = [];
 
 // переопределяем DOM в соответствии с актуальными значениями в todoData:
 function render() {
@@ -58,8 +58,5 @@ formTodoControl.addEventListener('submit', function (event) {
   }
 });
 
-localStorage.forEach(function (item) {
-  todoData.push(JSON.parse(localStorage.getItem('todoData')));
-});
-
+todoData = JSON.parse(localStorage.getItem('todoData'));
 render();
