@@ -6,14 +6,6 @@ const formTodoControl = document.querySelector('.todo-control'),
   ulTodoCompleted = document.querySelector('.todo-completed');
 
 const todoData = [];
-// {
-//   value: 'Сварить кофе',
-//   completed: false
-// },
-// {
-//   value: 'Помыть посуду',
-//   completed: true
-// }
 
 // переопределяем DOM в соответствии с актуальными значениями в todoData:
 function render() {
